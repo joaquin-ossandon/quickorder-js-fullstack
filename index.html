@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/vendors/magnificpopup/magnific-popup.css"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Nav-bar -->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand text-primary" href="#">
+            <img src="./assets/img/logos/logo.avif" alt="Logo" width="40" />
+            <span class="fw-bold">Quick</span><span>Order</span>
+          </a>
+          <!-- Actions group -->
+          <div
+            class="d-flex gap-3 align-items-center justify-content-end flex-fill"
+          >
+            <!-- Cart button 👀 -->
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCarrito"
+              aria-controls="offcanvasCarrito"
+              aria-label="Abrir Carrito"
+            >
+              <div class="position-relative small">
+                <i class="bi bi-cart-fill fs-5 text-body-secondary"></i>
+                <span
+                  class="position-absolute badge badge-cart translate-middle rounded-circle bg-danger"
+                >
+                  0
+                  <span class="visually-hidden">products added</span>
+                </span>
+              </div>
+            </button>
+            <!-- User Button -->
+            <div class="dropdown">
+              <button
+                type="button"
+                title="opciones de usuario"
+                class="btn btn-outline-secondary p-1 dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                data-bs-auto-close="outside"
+              >
+                <img
+                  src="./assets/img/no-user.avif"
+                  width="34"
+                  height="34"
+                  class="object-fit-cover rounded-circle"
+                  alt=""
+                />
+              </button>
+              <form
+                class="dropdown-menu dropdown-menu-end p-4"
+                style="min-width: 300px"
+              >
+                <div class="mb-3">
+                  <label for="userEmail" class="form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="userEmail"
+                    placeholder="correo@dominio.cl"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="userPassword" class="form-label"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="userPassword"
+                    placeholder="Tu contraseña"
+                  />
+                </div>
+                <div class="d-flex justify-content-start flex-column">
+                  <button type="submit" class="btn btn-primary">
+                    Iniciar sesión
+                  </button>
+                  <span class="mt-4 mb-0 text-center">¿No tienes cuenta?</span>
+                  <a href="./pages/register.html" class="btn btn-link">
+                    Registrarse
+                  </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Category List -->
+      <nav
+        id="categories"
+        class="mt-4 overflow-x-auto container"
+        aria-label="Menú de Categorías de Comida"
+      >
+        <ul class="nav nav-pills flex-nowrap">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Entradas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Platos fuerte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pizzas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Bebidas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Postres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">De la Casa</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4 g-4 mt-4">
+          <div class="col">
+            <div class="card">
+              <a
+                class="image-popup-no-margins"
+                href="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+              >
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                  class="card-img-top"
+                  alt="Pizza Margarita"
+                />
+              </a>
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button
+                  href="#"
+                  class="btn btn-primary w-100 py-2"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasCarrito"
+                  aria-controls="offcanvasCarrito"
+                  aria-label="Abrir Carrito"
+                >
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://static.vecteezy.com/system/resources/previews/022/994/042/non_2x/the-pepperoni-pizza-and-a-piece-of-streched-cheese-pizza-with-ai-generated-free-photo.jpg"
+                class="card-img-top"
+                alt="Pizza Margarita"
+              />
+
+              <div class="card-body">
+                <h5 class="card-title fw-bold mb-1">Pizza Margarita</h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">$11.000</h6>
+                <p
+                  class="card-text line-clamp-2"
+                  title=" La clásica: salsa de tomate, cremosa Mozzarella y frescas hojas de albahaca, aceite de oliva virgen extra sobre masa artesanal."
+                >
+                  La clásica: salsa de tomate, cremosa Mozzarella y frescas
+                  hojas de albahaca, aceite de oliva virgen extra sobre masa
+                  artesanal.
+                </p>
+
+                <button href="#" class="btn btn-primary w-100 py-2">
+                  <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- OffCanvas Carrito -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasCarrito"
+      aria-labelledby="offcanvasCarritoLabel"
+    >
+      <div class="offcanvas-header bg-light border-bottom">
+        <h5 class="offcanvas-title fw-bold" id="offcanvasCarritoLabel">
+          Tu Pedido
+        </h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column">
+        <!-- Resumen del Usuario y Subtotal (como se ve en la imagen) -->
+        <div class="d-flex align-items-center mb-4 pb-3 border-bottom">
+          <i class="bi bi-person-circle fs-2 me-3 text-muted"></i>
+          <div>
+            <h6 class="mb-0 fw-bold">Tu Pedido</h6>
+            <p class="text-muted small mb-0">Subtotal: $26.500</p>
+          </div>
+        </div>
+
+        <!-- Lista de Productos en el Carrito (simulada) -->
+        <ul class="list-group list-group-flush flex-grow-1">
+          <!-- Artículo 1: Pizza Margarita -->
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center px-0"
+          >
+            <div class="d-flex align-items-center">
+              <i class="bi bi-geo-alt-fill text-danger me-3"></i>
+              <span class="fw-normal">Pizza Margarita</span>
+            </div>
+            <span class="fw-bold">$11.500</span>
+          </li>
+
+          <!-- Artículo 2: Ensalada César -->
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center px-0"
+          >
+            <div class="d-flex align-items-center">
+              <i class="bi bi-cup-straw me-3"></i>
+              <span class="fw-normal">Ensalada César</span>
+            </div>
+            <span class="fw-bold">$3.000</span>
+          </li>
+
+          <!-- Artículo 3: Pasta Carbonara -->
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center px-0"
+          >
+            <div class="d-flex align-items-center">
+              <i class="bi bi-house-door-fill me-3"></i>
+              <span class="fw-normal">Pasta Carbonara</span>
+            </div>
+            <span class="fw-bold">$12.000</span>
+          </li>
+
+          <!-- Más espacio para artículos, simulado con un div flexible -->
+          <div class="flex-grow-1"></div>
+        </ul>
+
+        <!-- Pie de página del Offcanvas con el botón de compra -->
+        <div class="mt-auto pt-3 border-top">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary btn-lg">
+              Finalizar Compra
+            </button>
+          </div>
+          <p class="text-center text-muted small mt-2 mb-0">
+            El impuesto y el envío se calculan al finalizar.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="border-top mt-5 p-4 bg-body-tertiary">
+      <div class="container">
+        <div class="row">
+          <!-- Columna 1: Logo y eslogan -->
+          <div class="col-md-4">
+            <h5 class="fw-bold mb-3 text-dark">QuickOrder</h5>
+            <p class="text-muted">
+              La forma más rápida y deliciosa de pedir tu comida favorita.
+            </p>
+            <p class="text-muted small">
+              &copy; 2025 QuickOrder, Inc. Todos los derechos reservados.
+            </p>
+          </div>
+
+          <!-- Columna 2: Enlaces Rápidos -->
+          <div class="col-6 col-md-2">
+            <h6 class="fw-bold mb-3">Descubre</h6>
+            <ul class="list-unstyled">
+              <!-- Clases de texto 'text-secondary' y 'text-decoration-none' -->
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Sobre Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Preguntas Frecuentes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Colabora en el proyecto</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna 3: Legal y Ayuda -->
+          <div class="col-6 col-md-3">
+            <h6 class="fw-bold mb-3">Ayuda y Legal</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Contacto</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Términos del Servicio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Política de Privacidad</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Aviso de Cookies</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Columna 4: Redes Sociales -->
+          <div class="col-md-3">
+            <h6 class="fw-bold mb-3">Síguenos</h6>
+            <!-- Los iconos usan 'text-dark' para un color oscuro y 'text-decoration-none' -->
+            <div class="d-flex gap-3">
+              <a
+                href="#"
+                class="text-dark text-decoration-none fs-5"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="text-dark text-decoration-none fs-5"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="text-dark text-decoration-none fs-5"
+                aria-label="Twitter"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="text-dark text-decoration-none fs-5"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Línea separadora -->
+        <hr class="mt-4" />
+
+        <div class="row">
+          <div class="col text-center">
+            <p class="text-muted small">
+              &copy; 2025 QuickOrder. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="./assets/vendors/magnificpopup/jquery.magnific-popup.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

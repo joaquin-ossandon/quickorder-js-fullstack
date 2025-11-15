@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/bootstrap/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body class="d-flex min-vh-100 align-items-center">
+    <div
+      class="container form-container register-container p-4 p-md-5 bg-white shadow-lg rounded-3 border"
+    >
+      <!-- Encabezado y Logo -->
+      <div class="text-center mb-4">
+        <img src="../assets/img/logos/logo.avif" width="80" alt="logo" />
+        <h1 class="h3 fw-bold mb-1">Inicia sesión en QuickOrder</h1>
+        <p class="text-muted">¡Pide tu comida en segundos!</p>
+      </div>
+
+      <!-- Formulario de Registro -->
+      <form class="needs-validation" novalidate>
+        <!-- Campo Email -->
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">Correo Electrónico</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            required
+            placeholder="ejemplo@correo.com"
+          />
+          <div class="invalid-feedback">
+            Por favor, ingresa un correo electrónico válido.
+          </div>
+        </div>
+
+        <!-- Campo Contraseña -->
+        <div class="mb-3">
+          <label for="inputPassword" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            required
+            minlength="6"
+          />
+          <div class="invalid-feedback">
+            La contraseña debe tener al menos 6 caracteres.
+          </div>
+        </div>
+
+        <!-- Botón de Registro -->
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary btn-lg fw-bold">
+            Iniciar sesión
+          </button>
+        </div>
+
+        <hr class="my-4" />
+
+        <!-- Enlace a la página de inicio de sesión -->
+        <p class="text-center text-muted">
+          ¿No tienes una cuenta?
+          <a
+            href="./register.html"
+            class="text-primary text-decoration-none fw-bold"
+            >Registrate</a
+          >
+        </p>
+      </form>
+    </div>
+  </body>
+</html>

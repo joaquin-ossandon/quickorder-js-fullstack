@@ -1,0 +1,31 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+#categories li a {
+  width: max-content;
+}
+
+#categories {
+  scroll-snap-type: mandatory;
+  scrollbar-width: 20px;
+}
+
+.badge-cart {
+  top: 80% !important;
+  left: 95%;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Establece el límite a 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Opcional, pero recomendado */
+}
+
+.form-container {
+  width: 100%;
+}
+
+.register-container, .login-container {
+  max-width: 450px;
+}
