@@ -12,5 +12,5 @@ Crearemos una aplicación FullStack para un restaurante que permitirá a los cli
 ## Integrantes
 - Rodrigo Donoso
 
-## Grupo 3
+## Grupo 3 👌🏿
 - Trillo Lillo
