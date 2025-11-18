@@ -20,6 +20,10 @@ Crearemos una aplicación FullStack para un restaurante que permitirá a los cli
 
 - Trillo Lillo
 
+### Grupo 4 ✨
+
+- David Mondaca
+
 ### Grupo 6
 
 - Guillermo Villar
