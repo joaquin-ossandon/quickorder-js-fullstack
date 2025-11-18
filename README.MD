@@ -16,6 +16,10 @@ Crearemos una aplicación FullStack para un restaurante que permitirá a los cli
 - [Rodrigo Donoso](mailto:rdonosomindhubweb@gmail.com)
 - [Joaquín Ossandón](mailto:jossandonmindhubweb@gmail.com)
 
+### Grupo 1
+
+- José Osses
+
 ### Grupo 3 👌🏿
 
 - Trillo Lillo
