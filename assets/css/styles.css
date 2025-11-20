@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css');
 
 #categories li a {
   width: max-content;
@@ -17,6 +17,7 @@
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Establece el límite a 2 líneas */
+  line-clamp: 2; /* Standard property for compatibility */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis; /* Opcional, pero recomendado */
@@ -26,6 +27,7 @@
   width: 100%;
 }
 
-.register-container, .login-container {
+.register-container,
+.login-container {
   max-width: 450px;
 }
