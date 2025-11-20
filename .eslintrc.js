@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   // Configuración de entorno
   env: {
     browser: true,
