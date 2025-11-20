@@ -18,3 +18,7 @@ assets/vendors/
 **/*.min.js
 **/*-min.js
 **/*.bundle.js
+
+.eslintrc.js
+.prettierrc.js
+*.config.js
