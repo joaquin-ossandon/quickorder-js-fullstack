@@ -1,45 +1,37 @@
 name: JavaScript Linting (ESLint)
 
-# Ejecutar en push a ramas principales y en Pull Requests
 on:
   push:
-    branches:
-      - main
-      - master
-      - develop
+    branches: [main, master, develop]
   pull_request:
-    branches:
-      - main
-      - master
-      - develop
+    branches: [main, master, develop]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout: Descargar el código
-      - uses: actions/checkout@v4
+      # 1. Descargar el código
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      # 2. Setup Node.js: Configurar el entorno (es necesario para NPM/ESLint)
-      - name: Use Node.js 20.x
+      # 2. Configurar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x' # Usamos una versión estable de Node.js
+          node-version: '20.x'
 
-      # 3. Instalación de ESLint y Dependencias de forma Temporal y Global
-      # ¡ESTE ES EL PASO CLAVE!
-      - name: Install ESLint and Required Configs Globally
+      # 3. Crear entorno temporal e instalar dependencias
+      # Hacemos 'npm init -y' para crear un package.json temporal SOLO en el servidor.
+      # Luego instalamos las dependencias LOCALMENTE en el servidor.
+      # Esto permite que ESLint encuentre 'airbnb-base' sin problemas.
+      - name: Install Dependencies (Temporary Local)
         run: |
-          # Instalamos las herramientas necesarias para leer el .eslintrc.js
-          # Esto instala ESLint y todas las configuraciones de Airbnb/Prettier.
-          # Esto sucede solo en el servidor de GitHub, no en el local del alumno.
-          npm install -g eslint@8 eslint-config-airbnb-base eslint-plugin-import eslint-config-prettier prettier
+          npm init -y
+          npm install eslint@8 eslint-config-airbnb-base eslint-plugin-import eslint-config-prettier prettier
 
       # 4. Ejecutar ESLint
+      # Usamos 'npx' para ejecutar el eslint que acabamos de instalar localmente.
       - name: Run ESLint Check
-        # Ejecutamos el linter usando el binario global (eslint)
-        # El comando 'eslint' detectará automáticamente el archivo .eslintrc.js
-        # --max-warnings 0 asegura que falle con cualquier advertencia o error.
         run: |
-          eslint . --ext .js --max-warnings 0
+          npx eslint . --ext .js --max-warnings 0
