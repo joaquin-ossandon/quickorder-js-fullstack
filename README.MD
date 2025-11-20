@@ -1,5 +1,7 @@
 # Proyecto: QuickOrder
 
+> **Nota:** Para contribuir en proyecto, es importante que lea el documento [CONTRIBUTING.MD](https://github.com/joaquin-ossandon/quickorder-js-fullstack/tree/dev?tab=contributing-ov-file) que está en este mismo repositorio.
+
 ## ¿Qué es QuickOrder?
 
 Crearemos una aplicación FullStack para un restaurante que permitirá a los clientes:
