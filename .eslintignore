@@ -1,0 +1,20 @@
+# Ignorar dependencias instaladas (por si acaso)
+node_modules/
+
+# Ignorar archivos de compilación/distribución
+dist/
+build/
+
+# Ignorar librerías de terceros (Bootstrap, jQuery, etc.)
+# Ajusta estos nombres según dónde guarden los alumnos sus librerías
+vendor/
+vendors/
+lib/
+libs/
+assets/vendor/
+assets/vendors/
+
+# Ignorar CUALQUIER archivo minificado en cualquier lugar del proyecto
+**/*.min.js
+**/*-min.js
+**/*.bundle.js
