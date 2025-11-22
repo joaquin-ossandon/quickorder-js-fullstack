@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   // Configuración de entorno
   env: {
     browser: true,
@@ -8,11 +9,7 @@ module.exports = {
   },
 
   // Configuración de extendidos/presets
-  extends: [
-    'eslint:recommended',
-    'airbnb-base',
-    'prettier', 
-  ],
+  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
 
   // Opciones del parser para ES
   parserOptions: {
@@ -24,7 +21,7 @@ module.exports = {
   rules: {
     'no-var': 'error',
     'prefer-const': 'error',
-    'camelcase': [
+    camelcase: [
       'error',
       {
         properties: 'never',
@@ -40,8 +37,8 @@ module.exports = {
         ignoreDestructuring: true,
       },
     ],
-    'indent': ['error', 2, { SwitchCase: 1 }],
-    'semi': ['error', 'always'],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
     'no-unused-vars': 'warn',
     'no-console': 'warn',
