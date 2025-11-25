@@ -1,6 +1,6 @@
 // products.js
 // MODELO: Array de productos (objeto literal con 10 ítems)
-export const productosData = [
+const productosData = [
   {
     id: 1,
     nombre: 'Pizza Margarita',
