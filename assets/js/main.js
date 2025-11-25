@@ -1,1 +1,1 @@
-console.log('JS enlazado correctamente');
+getProducts();
