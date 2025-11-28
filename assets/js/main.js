@@ -10,9 +10,9 @@ function renderProducts() {
     const card = `
         <div class="col">
           <div class="card h-100">
-            <img src="${
-              product.imagen
-            }" class="card-img-top img-fit w-50" alt="${product.nombre}" />
+            <img src="${product.imagen}" class="card-img-top img-fit" alt="${
+      product.nombre
+    }" />
 
             <div class="card-body justify-content-around d-flex flex-column">
               <h5 class="card-title fw-bold mb-1">${product.nombre}</h5>
