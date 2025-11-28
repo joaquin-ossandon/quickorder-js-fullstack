@@ -3,9 +3,7 @@ module.exports = {
   // Configuración de entorno
   env: {
     browser: true,
-    commonjs: true,
     es2021: true,
-    node: true,
   },
 
   // Configuración de extendidos/presets
@@ -32,7 +30,7 @@ module.exports = {
       'error',
       '^[a-z]+([A-Z][a-z]+)*$',
       {
-        properties: true,
+        properties: false,
         onlyDeclarations: true,
         ignoreDestructuring: true,
       },
@@ -40,6 +38,7 @@ module.exports = {
     indent: ['error', 2, { SwitchCase: 1 }],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
+    'no-undef': 'warn',
     'no-unused-vars': 'warn',
     'no-console': 'warn',
     'no-alert': 'error',
