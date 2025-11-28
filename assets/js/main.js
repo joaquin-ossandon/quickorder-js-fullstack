@@ -1,6 +1,5 @@
 // assets/js/main.js
 const productsContainer = document.querySelector('#products-container');
-console.log(productsContainer);
 function renderProducts() {
   const products = getProducts();
 
@@ -37,5 +36,3 @@ function renderProducts() {
   });
 }
 renderProducts();
-// // Llama a renderProducts cuando el DOM esté listo (mejor práctica)
-// document.addEventListener('DOMContentLoaded', renderProducts);
