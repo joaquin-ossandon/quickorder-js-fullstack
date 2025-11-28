@@ -31,3 +31,8 @@
 .login-container {
   max-width: 450px;
 }
+.img-fit {
+  align-self: center !important;
+  object-fit: cover !important;
+  aspect-ratio: 3 / 2 !important;
+}
