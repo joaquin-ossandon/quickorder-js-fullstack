@@ -19,3 +19,5 @@ $('#userEmail, #userPassword').on('input', function () {
 });
 
 var red = "red"
+
+let carrito = []; //QOJS-19: Crear el objeto global carrito en memoria.
