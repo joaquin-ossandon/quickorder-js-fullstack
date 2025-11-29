@@ -30,6 +30,7 @@ Crearemos una aplicación FullStack para un restaurante que permitirá a los cli
 ### Grupo 4 ✨
 
 - David Mondaca
+- Manuel González L.
 
 ### Grupo 6
 
