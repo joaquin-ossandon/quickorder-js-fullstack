@@ -90,6 +90,3 @@ const ordersData = [
   }
 ];
 
-// mostra datos
-console.log("--- 2. Table View (Summary) ---");
-console.table(ordersData);
