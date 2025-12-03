@@ -1,5 +1,4 @@
-// assets/js/main.js
-import { getProducts } from './products.js'; // <-- FIX
+import { getProducts } from './products';
 
 const productsContainer = document.querySelector('#products-container');
 const carrito = [];
@@ -9,12 +8,11 @@ function renderProducts() {
   productsContainer.innerHTML = '';
 
   products.forEach((product) => {
-    // <-- FIX
     const card = `
       <div class="col">
         <div class="card h-100">
-          <img src="${product.imagen}" 
-               class="card-img-top img-fit" 
+          <img src="${product.imagen}"
+               class="card-img-top img-fit"
                alt="${product.nombre}" />
           <div class="card-body justify-content-around d-flex flex-column">
             <h5 class="card-title fw-bold mb-1">${product.nombre}</h5>
