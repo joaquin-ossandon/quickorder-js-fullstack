@@ -21,7 +21,10 @@ Crearemos una aplicación FullStack para un restaurante que permitirá a los cli
 ### Grupo 2 😎
 
 - Oliver Barra
+<<<<<<< HEAD
 - Noemy Rivera
+=======
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
 
 ### Grupo 3 👌🏿
 

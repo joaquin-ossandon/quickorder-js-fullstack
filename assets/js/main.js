@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 // assets/js/main.js
 const productsContainer = document.querySelector('#products-container');
 function renderProducts() {
   const products = getProducts();
 
   productsContainer.innerHTML = ''; // Limpia el contenedor
+=======
+$('.card .card-body .btn').on('click', function () {
+  $(this).html('Hola, soy un nuevo <strong>HTML</strong>');
+});
+
+$('#userEmail, #userPassword').on('input', function () {
+  const nextElement = $(this).next();
+  const inputType = $(this).attr('type');
+  const passLen = $(this).val().length;
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
 
   products.forEach((product) => {
     const card = `
@@ -13,6 +24,7 @@ function renderProducts() {
       product.nombre
     }" />
 
+<<<<<<< HEAD
             <div class="card-body justify-content-around d-flex flex-column">
               <h5 class="card-title fw-bold mb-1">${product.nombre}</h5>
 
@@ -36,3 +48,13 @@ function renderProducts() {
   });
 }
 renderProducts();
+=======
+  if (inputType === 'password' && passLen <= 6) {
+    $(this).after(
+      '<p class="small text-danger">La contraseña de tener al menos 7 caracteres.<p>',
+    );
+  }
+});
+
+var red = "red"
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
