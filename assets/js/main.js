@@ -2,13 +2,14 @@
 import { getProducts } from './products.js'; // <-- FIX
 
 const productsContainer = document.querySelector('#products-container');
-const carrito = [];¿
+const carrito = [];
 
 function renderProducts() {
   const products = getProducts();
   productsContainer.innerHTML = '';
 
-  products.forEach(product => { // <-- FIX
+  products.forEach((product) => {
+    // <-- FIX
     const card = `
       <div class="col">
         <div class="card h-100">
