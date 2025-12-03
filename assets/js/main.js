@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 // assets/js/main.js
 const productsContainer = document.querySelector('#products-container');
+const carrito = [];
+
 function renderProducts() {
   const products = getProducts();
 
