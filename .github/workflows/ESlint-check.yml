@@ -28,10 +28,11 @@ jobs:
           #    Instalamos también todos los plugins necesarios explícitamente.
           npm install \
             eslint@^8.57.0 \
+            prettier@^3.2.5 \
             eslint-config-airbnb-base@^15.0.0 \
             eslint-plugin-import@^2.29.1 \
             eslint-config-prettier@^9.1.0 \
-            prettier@^3.2.5
+            eslint-plugin-prettier
 
       - name: Run ESLint Check
         run: npx eslint . --ext .js --max-warnings 0 --resolve-plugins-relative-to .
