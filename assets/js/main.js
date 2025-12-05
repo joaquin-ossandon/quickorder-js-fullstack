@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // assets/js/main.js
 const productsContainer = document.querySelector('#products-container');
 const carrito = [];
@@ -7,16 +6,6 @@ function renderProducts() {
   const products = getProducts();
 
   productsContainer.innerHTML = ''; // Limpia el contenedor
-=======
-$('.card .card-body .btn').on('click', function () {
-  $(this).html('Hola, soy un nuevo <strong>HTML</strong>');
-});
-
-$('#userEmail, #userPassword').on('input', function () {
-  const nextElement = $(this).next();
-  const inputType = $(this).attr('type');
-  const passLen = $(this).val().length;
->>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
 
   products.forEach((product) => {
     const card = `
@@ -26,7 +15,6 @@ $('#userEmail, #userPassword').on('input', function () {
       product.nombre
     }" />
 
-<<<<<<< HEAD
             <div class="card-body justify-content-around d-flex flex-column">
               <h5 class="card-title fw-bold mb-1">${product.nombre}</h5>
 
@@ -38,7 +26,7 @@ $('#userEmail, #userPassword').on('input', function () {
                 ${product.descripcion}
               </p>
 
-              <button class="btn btn-primary w-100 py-2 justify-content-end">
+              <button class="btn btn-primary w-100 py-2 justify-content-end agregar-carrito">
                 <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
               </button>
             </div>
@@ -50,13 +38,9 @@ $('#userEmail, #userPassword').on('input', function () {
   });
 }
 renderProducts();
-=======
-  if (inputType === 'password' && passLen <= 6) {
-    $(this).after(
-      '<p class="small text-danger">La contraseña de tener al menos 7 caracteres.<p>',
-    );
+
+productsContainer.addEventListener('click', function (event) {
+  if (event.target.closest('.agregar-carrito')) {
+    console.log('Hiciste click en Añadir al Carrito!');
   }
 });
-
-var red = "red"
->>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
