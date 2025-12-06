@@ -142,12 +142,9 @@ function renderAdminPedidos(containerId, pedidos) {
         <div class="accordion-item border-0 border-bottom">
           <h2 class="accordion-header" id="heading-${pedido.id}">
             <button
-              class="accordion-button ${isCollapsedBtn} ${[
-                'completado',
-                'cancelado',
-              ].includes(pedido.estado)
-                ? 'bg-light'
-                : ''}"
+              class="accordion-button ${isCollapsedBtn} ${
+        ['completado', 'cancelado'].includes(pedido.estado) ? 'bg-light' : ''
+      }"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapse-${pedido.id}"
@@ -159,7 +156,9 @@ function renderAdminPedidos(containerId, pedidos) {
               >
                 <div class="d-flex align-items-center gap-3">
                   <div
-                    class="bg-${config.color} bg-opacity-10 text-${config.color} p-2 rounded-3"
+                    class="bg-${config.color} bg-opacity-10 text-${
+        config.color
+      } p-2 rounded-3"
                   >
                     <i class="bi ${config.icon} fs-5"></i>
                   </div>
@@ -172,16 +171,18 @@ function renderAdminPedidos(containerId, pedidos) {
                 </div>
                 <div class="d-flex align-items-center gap-3 ms-auto">
                   <span
-                    class="badge bg-${config.color} ${config.color === 'warning'
-                      ? 'text-dark'
-                      : ''} rounded-pill px-3"
+                    class="badge bg-${config.color} ${
+        config.color === 'warning' ? 'text-dark' : ''
+      } rounded-pill px-3"
                   >
                     ${config.label}
                   </span>
                   <span
-                    class="fw-bold ${pedido.estado === 'cancelado'
-                      ? 'text-muted text-decoration-line-through'
-                      : 'text-dark'}"
+                    class="fw-bold ${
+                      pedido.estado === 'cancelado'
+                        ? 'text-muted text-decoration-line-through'
+                        : 'text-dark'
+                    }"
                   >
                     $${pedido.total.toFixed(2)}
                   </span>
@@ -198,9 +199,11 @@ function renderAdminPedidos(containerId, pedidos) {
             <div class="accordion-body bg-light">
               <div class="card border-0">
                 <div class="card-body">
-                  ${pedido.nota
-                    ? `<div class="mb-3 p-3 bg-warning bg-opacity-10 rounded border border-warning"><i class="bi bi-sticky-fill text-warning me-2"></i><strong>Nota:</strong> ${pedido.nota}</div>`
-                    : ''}
+                  ${
+                    pedido.nota
+                      ? `<div class="mb-3 p-3 bg-warning bg-opacity-10 rounded border border-warning"><i class="bi bi-sticky-fill text-warning me-2"></i><strong>Nota:</strong> ${pedido.nota}</div>`
+                      : ''
+                  }
                   ${itemsHtml} ${actionsHtml}
                 </div>
               </div>
