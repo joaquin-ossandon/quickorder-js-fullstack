@@ -143,7 +143,9 @@ function renderAdminPedidos(containerId, pedidos) {
           <h2 class="accordion-header" id="heading-${pedido.id}">
             <button
               class="accordion-button ${isCollapsedBtn} ${
-        ['completado', 'cancelado'].includes(pedido.estado) ? 'bg-light' : ''
+        ['completado', 'cancelado'].includes(pedido.estado) 
+                  ? 'bg-light' 
+                  : ''
               }"
               type="button"
               data-bs-toggle="collapse"
