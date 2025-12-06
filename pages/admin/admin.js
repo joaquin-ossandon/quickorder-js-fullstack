@@ -144,7 +144,7 @@ function renderAdminPedidos(containerId, pedidos) {
             <button
               class="accordion-button ${isCollapsedBtn} ${
         ['completado', 'cancelado'].includes(pedido.estado) ? 'bg-light' : ''
-      }"
+              }"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapse-${pedido.id}"
@@ -157,8 +157,8 @@ function renderAdminPedidos(containerId, pedidos) {
                 <div class="d-flex align-items-center gap-3">
                   <div
                     class="bg-${config.color} bg-opacity-10 text-${
-        config.color
-      } p-2 rounded-3"
+                      config.color
+                    } p-2 rounded-3"
                   >
                     <i class="bi ${config.icon} fs-5"></i>
                   </div>
@@ -172,8 +172,8 @@ function renderAdminPedidos(containerId, pedidos) {
                 <div class="d-flex align-items-center gap-3 ms-auto">
                   <span
                     class="badge bg-${config.color} ${
-        config.color === 'warning' ? 'text-dark' : ''
-      } rounded-pill px-3"
+                      config.color === 'warning' ? 'text-dark' : ''
+                    } rounded-pill px-3"
                   >
                     ${config.label}
                   </span>
