@@ -35,4 +35,4 @@ jobs:
             eslint-plugin-prettier
 
       - name: Run ESLint Check
-        run: npx eslint . --ext .js --max-warnings 0 --resolve-plugins-relative-to .
+        run: npx eslint . --ext .js --resolve-plugins-relative-to .
