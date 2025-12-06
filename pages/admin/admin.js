@@ -136,16 +136,15 @@ function renderAdminPedidos(containerId, pedidos) {
       return `
             <div class="accordion-item border-0 border-bottom">
               <h2 class="accordion-header" id="heading-${pedido.id}">
-                <button class="accordion-button ${isCollapsedBtn} ${
-        pedido.estado === 'completado' || pedido.estado === 'cancelado'
-          ? 'bg-light'
-          : ''
-      }" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#collapse-${pedido.id}" 
-                        aria-expanded="${index === 0}" 
-                        aria-controls="collapse-${pedido.id}">
+                <button 
+                  class="accordion-button ${isCollapsedBtn} ${
+        ['completado', 'cancelado'].includes(pedido.estado) ? 'bg-light' : ''
+      }"
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapse-${pedido.id}" 
+                    aria-expanded="${index === 0}" 
+                    aria-controls="collapse-${pedido.id}">
                   <div class="d-flex w-100 align-items-center justify-content-between pe-3 flex-wrap gap-2">
                     <div class="d-flex align-items-center gap-3">
                       <div class="bg-${config.color} bg-opacity-10 text-${
