@@ -8,7 +8,7 @@ function renderProducts() {
   productsContainer.innerHTML = ''; // Limpia el contenedor
 
   products.forEach((product) => {
-    const card = html`
+    const card = `
       <div class="col">
         <div class="card h-100">
           <img

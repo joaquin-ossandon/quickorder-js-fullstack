@@ -94,7 +94,7 @@ function renderAdminPedidos(containerId, pedidos) {
       // Generar contenido interior según estado (simplificado para el ejemplo)
       let itemsHtml = '';
       if (pedido.items) {
-        itemsHtml = html`
+        itemsHtml = `
           <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">
               <thead class="table-light">
@@ -138,7 +138,7 @@ function renderAdminPedidos(containerId, pedidos) {
               </div>`;
       }
 
-      return html`
+      return `
         <div class="accordion-item border-0 border-bottom">
           <h2 class="accordion-header" id="heading-${pedido.id}">
             <button
@@ -212,7 +212,7 @@ function renderAdminPedidos(containerId, pedidos) {
     .join('');
 
   // HTML Estructural Principal
-  const layoutHtml = html`
+  const layoutHtml = `
     <!-- Navegación Superior -->
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm p-3"
