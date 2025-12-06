@@ -1,92 +1,91 @@
 const ordersData = [
   {
     id: 1,
-    status: "pending", // El usuario creó el pedido pero no ha pagado
+    status: 'pending', // El usuario creó el pedido pero no ha pagado
     total: 45000,
     products: [
       {
-        productId: "prod-001",
-        description: "Cazuela de vacuno",
+        productId: 'prod-001',
+        description: 'Cazuela de vacuno',
         quantity: 1,
-        unitPrice: 45000
-      }
-    ]
+        unitPrice: 45000,
+      },
+    ],
   },
   {
     id: 2,
-    status: "paid", // Listo para cocina
+    status: 'paid', // Listo para cocina
     total: 22000,
     products: [
       {
-        productId: "prod-002",
-        description: "Pastel de Choclo",
+        productId: 'prod-002',
+        description: 'Pastel de Choclo',
         quantity: 2,
-        unitPrice: 8000
+        unitPrice: 8000,
       },
       {
-        productId: "prod-003",
-        description: "Bebida 1.5L",
+        productId: 'prod-003',
+        description: 'Bebida 1.5L',
         quantity: 2,
-        unitPrice: 3000
-      }
-    ]
+        unitPrice: 3000,
+      },
+    ],
   },
   {
     id: 3,
-    status: "in_transit", // Salió del restaurante
+    status: 'in_transit', // Salió del restaurante
     total: 15000,
     products: [
       {
-        productId: "prod-004",
-        description: "Chorrillana Individual",
+        productId: 'prod-004',
+        description: 'Chorrillana Individual',
         quantity: 1,
-        unitPrice: 12000
+        unitPrice: 12000,
       },
       {
-        productId: "prod-005",
-        description: "Empanada de Pino",
+        productId: 'prod-005',
+        description: 'Empanada de Pino',
         quantity: 1,
-        unitPrice: 3000
-      }
-    ]
+        unitPrice: 3000,
+      },
+    ],
   },
   {
     id: 4,
-    status: "delivered", // Cliente ya comió
+    status: 'delivered', // Cliente ya comió
     total: 9000,
     products: [
       {
-        productId: "prod-006",
-        description: "Completo Italiano",
+        productId: 'prod-006',
+        description: 'Completo Italiano',
         quantity: 2,
-        unitPrice: 3000
+        unitPrice: 3000,
       },
       {
-        productId: "prod-007",
-        description: "Papas Fritas Medianas",
+        productId: 'prod-007',
+        description: 'Papas Fritas Medianas',
         quantity: 1,
-        unitPrice: 3000
-      }
-    ]
+        unitPrice: 3000,
+      },
+    ],
   },
   {
     id: 5,
-    status: "cancelled", // Pedido anulado
+    status: 'cancelled', // Pedido anulado
     total: 60000,
     products: [
       {
-        productId: "prod-008",
-        description: "Parrillada para 4",
+        productId: 'prod-008',
+        description: 'Parrillada para 4',
         quantity: 1,
-        unitPrice: 55000
+        unitPrice: 55000,
       },
       {
-        productId: "prod-009",
-        description: "Vino Tinto Reserva",
+        productId: 'prod-009',
+        description: 'Vino Tinto Reserva',
         quantity: 1,
-        unitPrice: 5000
-      }
-    ]
-  }
+        unitPrice: 5000,
+      },
+    ],
+  },
 ];
-
