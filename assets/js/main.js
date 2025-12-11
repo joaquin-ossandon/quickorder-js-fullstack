@@ -41,6 +41,6 @@ renderProducts();
 
 productsContainer.addEventListener('click', function (event) {
   if (event.target.closest('.agregar-carrito')) {
-    console.log('Se agregó un producto al carrito!');
+    console.log('¡Se agregó un producto al carrito!');
   }
 });
