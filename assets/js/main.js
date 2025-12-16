@@ -38,3 +38,16 @@ function renderProducts() {
   });
 }
 renderProducts();
+
+function addToCart(productId) {
+  const products = getProducts();
+  const product = products.find((p) => p.id === productId);
+
+  if (product) {
+    carrito.push(product);
+    console.log('Producto agregado al carrito:', product);
+    alert(`¡${product.nombre} agregado al carrito!`);
+  } else {
+    console.error('Producto no encontrado');
+  }
+}
