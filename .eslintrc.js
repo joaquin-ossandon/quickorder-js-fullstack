@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   root: true,
   // Configuración de entorno
   env: {
@@ -7,7 +8,7 @@ module.exports = {
   },
 
   // Configuración de extendidos/presets
-  extends: ['eslint:recommended', 'airbnb-base', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
 
   // Opciones del parser para ES
   parserOptions: {
@@ -27,8 +28,10 @@ module.exports = {
     'no-var': 'error',
     // prefiere constantes a let para la mayoría de los casos
     'prefer-const': 'error',
-    // usa camelcase
     camelcase: [
+=======
+    'camelcase': [
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
       'error',
       {
         properties: 'never',
@@ -39,12 +42,24 @@ module.exports = {
       'error',
       '^[a-z]+([A-Z][a-z]+)*$',
       {
+<<<<<<< HEAD
         properties: false,
+=======
+        properties: true,
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
         onlyDeclarations: true,
         ignoreDestructuring: true,
       },
     ],
+    indent: ['error', 2, { SwitchCase: 1 }],
+    semi: ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
     'no-undef': 'warn',
+=======
+    'indent': ['error', 2, { SwitchCase: 1 }],
+    'semi': ['error', 'always'],
+    'comma-dangle': ['error', 'always-multiline'],
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
     'no-unused-vars': 'warn',
     'no-console': 'warn',
     'no-alert': 'error',
@@ -62,4 +77,8 @@ module.exports = {
       },
     },
   ],
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
