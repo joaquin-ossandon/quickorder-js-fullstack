@@ -26,9 +26,13 @@ function renderProducts() {
                 ${product.descripcion}
               </p>
 
-              <button class="btn btn-primary w-100 py-2 justify-content-end agregar-carrito">
-                <i class="bi bi-cart-plus me-2"></i> Añadir al Carrito
-              </button>
+              <button
+              class="btn btn-primary w-100 py-2 agregar-carrito"
+              data-id="${product.id}"
+            >
+              <i class="bi bi-cart-plus me-2"></i>
+              Añadir al Carrito
+            </button>
             </div>
           </div>
         </div>
@@ -39,8 +43,26 @@ function renderProducts() {
 }
 renderProducts();
 
-productsContainer.addEventListener('click', function (event) {
-  if (event.target.closest('.agregar-carrito')) {
-    console.log('¡Se agregó un producto al carrito!');
-  }
+// EVENT LISTENER
+productsContainer.addEventListener('click', (e) => {
+  const boton = e.target.closest('.agregar-carrito');
+
+  if (!boton) return;
+
+  const id = boton.dataset.id;
+  agregarAlCarrito(id);
 });
+
+function agregarAlCarrito(id) {
+  const products = getProducts();
+  const producto = products.find((p) => p.id == id);
+
+  if (!producto) return;
+
+  carrito.push(producto);
+
+  console.log('Producto agregado:', producto.nombre);
+  console.log('Carrito:', carrito);
+}
+
+renderProducts();

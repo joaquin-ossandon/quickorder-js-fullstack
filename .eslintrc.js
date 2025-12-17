@@ -9,34 +9,25 @@ module.exports = {
 
   // Configuración de extendidos/presets
   extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
-=======
-  // Configuración de entorno
-  env: {
-    browser: true,
-    commonjs: true,
-    es2021: true,
-    node: true,
-  },
-
-  // Configuración de extendidos/presets
-  extends: [
-    'eslint:recommended',
-    'airbnb-base',
-    'prettier', 
-  ],
->>>>>>> b46b8fa870bc7a3032eb20e6932ed8df4c382312
 
   // Opciones del parser para ES
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module',
+    sourceType: 'script',
   },
 
   // Reglas personalizadas
   rules: {
+    // eliminación de elementos clave airbnb-base para el trabajo en HTML, JS sin js-modules
+    'import/no-extraneous-dependencies': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'no-restricted-globals': 'off', // Permite usar variables globales comunes del navegador
+    // No var para variables
     'no-var': 'error',
+    // prefiere constantes a let para la mayoría de los casos
     'prefer-const': 'error',
-<<<<<<< HEAD
     camelcase: [
 =======
     'camelcase': [
@@ -60,7 +51,6 @@ module.exports = {
         ignoreDestructuring: true,
       },
     ],
-<<<<<<< HEAD
     indent: ['error', 2, { SwitchCase: 1 }],
     semi: ['error', 'always'],
     'comma-dangle': ['error', 'always-multiline'],
@@ -74,7 +64,7 @@ module.exports = {
     'no-console': 'warn',
     'no-alert': 'error',
     'prefer-arrow-callback': 'error',
-    'arrow-parens': ['error', 'as-needed'],
+    'prettier/prettier': 'error',
   },
 
   // Configuración de Overrides
